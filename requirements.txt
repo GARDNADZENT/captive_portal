@@ -1,0 +1,4 @@
+k2-connect
+python-dotenv
+requests 
+flask

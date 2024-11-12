@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/$imagesdir/splash.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./splash.css">
+
+    <title>GARDNADZ ENT</title>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <h1 class="title">GARDNADZ ENT WIFI</h1>
+        <div class="purchase-steps">
+            <div>Choose a package to connect to Wi-Fi.</div>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section class="packages-section" id="package-section">
+        <div class="package">
+            <h2 class="package-title">1 Hour</h2>
+            <p class="price">KSH: 10</p>
+            <p>MAX 5mbps</p>
+            <button onclick="purchasePackage(10)">GET</button>
+        </div>
+
+        <div class="package">
+            <h2 class="package-title">5 Hours</h2>
+            <p class="price">KSH: 14</p>
+            <p>MAX 5mbps</p>
+            <button onclick="purchasePackage(14)">GET</button>
+        </div>
+
+        <div class="package">
+            <h2 class="package-title">12 Hours</h2>
+            <p class="price">KSH: 25</p>
+            <p>MAX 5mbps</p>
+            <button onclick="purchasePackage(25)">GET</button>
+        </div>
+
+        <div class="package">
+            <h2 class="package-title">24 Hours</h2>
+            <p class="price">KSH: 35</p>
+            <p>MAX 5mbps</p>
+            <button onclick="purchasePackage(35)">GET</button>
+        </div>
+    </section>
+
+    <section id="mpesa">
+        <div>
+            <ul>
+                <li>Go to M-pesa STK</li>
+                <li>Lipa na M-pesa</li>
+                <li>Buy Goods Till Number</li>
+                <li>Enter <span style="color: greenyellow;" /></li>
+                <li>Enter your M-pesa Pin</li>
+                <li>Wait for M-Pesa confirmation message. Then paste the message below</li>
+            </ul>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <textarea rows="3" cols="10" id="message" type="text" placeholder="Paste your M-Pesa message here...">
+            </textarea>
+            <button style="background-color: blue; padding: 8pt; color: white; font-size: 3vw;">Confirm
+                Payment</button>
+        </div>
+    </section>
+
+    <p class="customer-care">CUSTOMER CARE CONTACT: 0759616942</p>
+
+    <form method="get" action="$authaction">
+        <input type="hidden" name="tok" value="$tok">
+        <input type="hidden" name="redir" value="$redir">
+        <button type="submit" style="background-color: greenyellow; padding: 2vw; font-size: ;">Connect Wi-Fi</button>
+    </form>
+
+    <hr>
+    <p class="copy-right">Copyright &copy; The Nodogsplash Contributors 2004-2018.<br>This software is released under
+        the
+        GNU GPL license.</p>
+</body>
+<script src="./script.js">
+
+</script>
+
+</html>

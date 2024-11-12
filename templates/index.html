@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARDNADZ ENT MOVIES SHOP</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b2b2b;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 10px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: #2d89ff;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #1a4d7b;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #00bfa5;
+            margin-top: 20px;
+            border-bottom: 2px solid #00bfa5;
+            padding-bottom: 5px;
+        }
+
+        .packages {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+        }
+
+        .package-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .package-item:last-child {
+            border-bottom: none;
+        }
+
+        .purchase-btn {
+            background-color: #00bfa5;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .purchase-btn:hover {
+            background-color: #007f6c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>GARDNADZ ENT MOVIES SHOP</h1>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='https://t.me/gardnadzent'">Movies</button>
+            <button onclick="window.location.href='https://t.me/gardnadzent'">Animation</button>
+            <button onclick="window.location.href='https://t.me/gardnadzent'">Series</button>
+            <button
+                onclick="window.location.href='https://www.youtube.com/@gardnadzenttechnologies4239'">Trailers</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Wi-Fi Packages Section -->
+        <section id="wifi-packages">
+            <h2 class="section-title">Wi-Fi Packages</h2>
+            <form method="POST" action="/pay">
+                <input type="hidden" name="price" id="priceInput">
+
+                <div class="packages">
+                    <div class="package-item">
+                        <span><strong>1 Hour:</strong> 20 KES</span>
+                        <button type="submit" onclick="setPackage('1 hour', 20)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>3 Hours:</strong> 30 KES</span>
+                        <button type="submit" onclick="setPackage('3 Hours', 30)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>12 Hours:</strong> 40 KES</span>
+                        <button type="submit" onclick="setPackage('12 Hours', 40)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>24 Hours:</strong> 50 KES</span>
+                        <button type="submit" onclick="setPackage('24 Hours', 50)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>2 Days:</strong> 70 KES</span>
+                        <button type="submit" onclick="setPackage('2 Days', 70)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>1 Week:</strong> 150 KES</span>
+                        <button type="submit" onclick="setPackage('1 Week', 150)">Purchase</button>
+                    </div>
+                    <div class="package-item">
+                        <span><strong>Monthly:</strong> 500 KES</span>
+                        <button type="submit" onclick="setPackage('1 Month', 500)">Purchase</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> gadnadolo19@gmail.com</p>
+                <p><strong>Phone:</strong> +254 759 616 942</p>
+                <p><strong>WhatsApp:</strong> <a href="https://chat.whatsapp.com/JJmEOMrF2NuBxHGjAaUoCz" target="_blank"
+                        style="color: #00bfa5;">Join our WhatsApp Group</a></p>
+                <p><strong>Location:</strong> Eldoret, Kenya</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <p>Welcome to GARDNADZ ENT MOVIES SHOP. We specialize in a wide range of entertainment content including
+                movies, animations, series, and trailers. Our Wi-Fi packages allow customers to stay connected and enjoy
+                high-speed internet services.</p>
+        </section>
+
+        <!-- Testimonies Section -->
+        <section id="testimonies">
+            <h2 class="section-title">Testimonies</h2>
+            <p>See what our satisfied customers have to say about us!</p>
+            <!-- Example testimonies -->
+            <p><strong>John Doe:</strong> "Great collection of movies and excellent customer service!"</p>
+            <p><strong>Jane Smith:</strong> "Affordable Wi-Fi packages with great speed!"</p>
+        </section>
+    </main>
+
+</body>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</html>
